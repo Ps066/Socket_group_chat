@@ -6,7 +6,7 @@ import Message from "../message/Message";
 import ReactScrollToBottom from "react-scroll-to-bottom";
 
 let socketInstance;
-const ENDPOINT = "http://localhost:4000/";
+const ENDPOINT = process.env.REACT_APP_ENDPOINT;
 
 const Chat = () => {
   const [isjoined, setIsJoined] = useState(false);
