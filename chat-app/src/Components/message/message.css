@@ -26,3 +26,21 @@
     float: left;
     color: white;
 }
+
+.msgInfoBox{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.msgInfo{
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    color: #929292;
+    background-color: #2e343d;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 7px;
+}

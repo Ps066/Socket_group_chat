@@ -28,10 +28,17 @@ const users = {};
 // middlewares
 app.use(cors());
 
+let totalUsers = 0;
+
 // listning websocket services
 io.on("connection", (socket) => {
   // io is connection and every user has there own soket to connect
   // console.log("new connection");
+
+//   totalUsers++;             
+
+  // Send total users count to all clients
+  io.emit("totalUsers", totalUsers);
 
   // as soon as any user joines the chat
   socket.on("joined", ({ user }) => {
@@ -39,6 +46,8 @@ io.on("connection", (socket) => {
     // console.log(users);
     // console.log(`${user} has joined the chat!`);
     // server tells everyone that user has joined
+    totalUsers++;  // Increase only when the user joins properly
+    io.emit("totalUsers", totalUsers);
     socket.broadcast.emit("userJoined", {
       user: "Admin",
       message: `${users[socket.id]} has joined the chat`,
@@ -66,6 +75,8 @@ io.on("connection", (socket) => {
 
     // automatic disconnection
     socket.on("disconnect", () => {
+        totalUsers = Math.max(totalUsers - 1, 0);
+        io.emit("totalUsers", totalUsers);
         socket.broadcast.emit("left", {
           user: "Admin",
           message: `${users[socket.id]} has left the chat!`,
