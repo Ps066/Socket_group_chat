@@ -1,0 +1,78 @@
+.joinPage {
+  background: #37464d;
+  background: radial-gradient(at center, #37464d, #38373a);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.joinContainer{
+    width: 50%;
+    background-color: #202329;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.joinHeading{
+    color: #fff;
+    margin: 20px 0px
+}
+
+.joinInput{
+    padding: 15px 20px;
+    border: none;
+    font-size: 14px;
+    border-radius: 7px;
+    margin: 10px 0px;
+    width: 40%;
+    text-align: center;
+}
+
+.joinInput:focus{
+    outline: none;
+}
+
+
+.joinBtn{
+    padding: 10px 20px;
+    background-color: #6b8afd;
+    border: none;
+    font-size: 14px;
+    border-radius: 7px;
+    margin: 10px 0px;
+    font-weight: 600;
+    transition: all 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+.joinBtn:hover{
+    background-color: #4e65b9;
+}
+
+.joinBtn:active{
+    transform: scale(0.9);
+}
+
+/* responsive media queries  */
+
+/* for tablets */
+@media only screen and (max-width: 1024px){
+    .joinContainer{
+        width: 70%;
+    }
+}
+
+/* for phones */
+@media only screen and (max-width: 450px){
+    .joinContainer{
+        width: 80%;
+    }
+}

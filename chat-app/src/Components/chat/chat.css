@@ -1,0 +1,136 @@
+.chatpage {
+  background: #37464d;
+  background: radial-gradient(at center, #37464d, #38373a);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatcard{
+    width: 50%;
+    background-color: #202329;
+    padding: 20px 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chatHeader{
+    padding: 10px;
+    width: 80%;
+    color: #fff;
+}
+
+.chatTitle{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 5px 0px;
+}
+
+.chatSubTitle{
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 2px;
+}
+
+.chatbody{
+    min-height: 300px;
+    height: 400px;
+    padding: 10px;
+    width: 80%;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-track{
+    background-color: #202329;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #2e343d;
+    border-radius: 20px;
+
+}
+
+
+
+
+.chatInput{
+    padding: 10px 0px;
+    width: 80%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chatInputBox{
+    background-color: #2e343d;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    width: 80%;
+    color: #fff;
+}
+.chatInputBox:focus{
+    outline: none;
+}
+
+.sendbutton{
+    background-color: #6b8afd;
+    border: none;
+    border-radius: 50%; /* Ensures a circular shape */
+    height: 45px; /* Fixed height */
+    width: 45px; /* Fixed width */
+    aspect-ratio: 1/1; /* Ensures width and height remain equal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.sendbutton:hover{
+    background-color: #526cc9;
+}
+
+.sendbutton:active{
+    transform: scale(0.9);
+}
+
+.sendIcon{
+    color: #fff;
+}
+
+
+
+
+
+/* responsive design  */
+
+/* for tablets */
+@media only screen and (max-width:1024px){
+   .chatcard{
+        width: 70%;
+        height:70%;
+        max-height: 70%;
+   }
+   .chatbody{
+    height: 80%;
+    max-height: 80%;
+   }
+}
+
+/* for phones */
+@media only screen and (max-width:550px){
+    .chatcard{
+        width: 90%;
+        height:70%;
+   }
+
+   
+}

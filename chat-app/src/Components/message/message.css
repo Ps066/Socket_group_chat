@@ -1,0 +1,28 @@
+.messageBox{
+    background-color: #2e343d;
+    width: 50%;
+    padding: 10px 15px;
+    margin: 12px 0px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.msgSender{
+    font-size: 10px;
+    font-weight: 600;
+    margin: 2px 0px;
+}
+
+.right{
+    float: right;
+    background-color: #6b8afd;
+    color: white;
+}
+
+
+.left{
+    float: left;
+    color: white;
+}
